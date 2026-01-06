@@ -30,6 +30,8 @@ tableau/
 README.md
 requirements.txt
 ```
+## How to Use
+
 
 ## Learnings
 - Applied numerical modeling and simulation logic in Python.
