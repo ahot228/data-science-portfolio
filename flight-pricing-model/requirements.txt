@@ -1,6 +1,4 @@
 pandas
-sqlite3
-pickle
 pathlib
 matplotlib
 seaborn

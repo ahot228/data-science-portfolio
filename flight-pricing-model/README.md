@@ -8,7 +8,7 @@ This project implements a Dynamic Flight Pricing Model using machine learning te
 - SQLite 3.x (Database)
 - Streamlit (Web App Deployment)
 - Tableau Public (Data Visualisation)
-- Libraries: pandas, numpy, seaborn, matplotlib, pathlib
+- Libraries: pandas, seaborn, matplotlib, pathlib, scikit-learn
 
 ## Structure
 ```
