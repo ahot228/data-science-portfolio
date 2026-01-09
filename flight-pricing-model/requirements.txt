@@ -5,3 +5,4 @@ pathlib
 matplotlib
 seaborn
 streamlit
+scikit-learn

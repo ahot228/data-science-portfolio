@@ -5,10 +5,10 @@ This project implements a Dynamic Flight Pricing Model using machine learning te
 
 ## Tech Stack
 - Python 3.x 
-- SQLite (Database)
+- SQLite 3.x (Database)
 - Streamlit (Web App Deployment)
-- Tableau (Data Visualisation)
-- Libraries: pandas, numpy, seaborn, matplotlib
+- Tableau Public (Data Visualisation)
+- Libraries: pandas, numpy, seaborn, matplotlib, pathlib
 
 ## Structure
 ```
@@ -37,31 +37,26 @@ requirements.txt
 
 2. Database Setup (SQLite)
 
-- Create flight_pricing.db and tables for flights and bookings.
+- Create flight_pricing.db and table for flights.
 
 3. Data Loading & Cleaning
 
 - Load CSV into SQLite.
-- Handle missing values and encode categorical features.
 
-4. Feature Engineering
-
-- Calculate days_to_departure and peak_season_flag.
-
-5. Exploratory Data Analysis (EDA)
+4. Exploratory Data Analysis (EDA)
 
 - Visualise price trends using Matplotlib & Seaborn.
 
-6. Model Building
+5. Model Building
 
 - Train a Linear Regression model.
 - Evaluate using RMSE and R².
 
-7. Deployment with Streamlit
+6. Deployment with Streamlit
 
 - Build an interactive web app for predictions.
 
-8. Tableau Dashboard
+7. Tableau Dashboard
 
 - Visualise price trends and route analysis.
 
@@ -71,6 +66,7 @@ requirements.txt
 1. Clone the repository:
 
 git clone https://github.com/ahot228/data-science-portfolio
+
 cd flight_pricing_model
 
 
@@ -81,7 +77,7 @@ pip install -r requirements.txt
 
 3. Run Streamlit app:
 
-streamlit run python/app.py
+streamlit run src/app.py
 
 ## Tableau
 
@@ -90,5 +86,7 @@ Visualisations:
 - Heatmap: Source-Destination routes
 - Gant Bar Chart: Price per class
 - Table: Stops vs Price
+
+https://public.tableau.com/app/profile/anish.hota/viz/flight_pricing_dashboard/FlightPricingModel
 
 ![Tableau Dashboard](visuals/dashboard.png)
