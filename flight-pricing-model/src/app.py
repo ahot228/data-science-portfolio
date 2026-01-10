@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import pickle
 from pathlib import Path
+import sklearn
 
 def preprocess_input(user_input, model_columns):
     df = pd.DataFrame([user_input])
