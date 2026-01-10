@@ -17,7 +17,7 @@ src/
 ├── app.py
 ├── load_data.py
 ├── ddl_scripts.sql
-notebooks/
+models/
 ├── linear_regression.pkl
 data/
 ├── flight_price.csv

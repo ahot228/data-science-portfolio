@@ -3,6 +3,7 @@ import pandas as pd
 import pickle
 from pathlib import Path
 import sklearn
+print("scikit-learn version:", sklearn.__version__)
 
 def preprocess_input(user_input, model_columns):
     df = pd.DataFrame([user_input])
