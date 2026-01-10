@@ -62,7 +62,6 @@ requirements.txt
 
 ## How to Use
 
-
 1. Clone the repository:
 
 git clone https://github.com/ahot228/data-science-portfolio
@@ -78,6 +77,12 @@ pip install -r requirements.txt
 3. Run Streamlit app:
 
 streamlit run src/app.py
+
+## Deployment
+
+I have also made this website public:
+
+https://data-science-portfolio-nzb8mztzhen7dcuwqzhuw8.streamlit.app/
 
 ## Tableau
 
