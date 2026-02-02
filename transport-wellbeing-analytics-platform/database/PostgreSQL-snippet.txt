@@ -1,0 +1,57 @@
+CREATE TABLE traffic AS
+SELECT
+    DATE(startDate)                         AS start_date,
+    siteID                                  AS site_id,
+    TRIM(regionName)                        AS region_name,
+    TRIM(classWeight)                       AS class_weight,
+    TRIM(siteDescription)                   AS site_description,
+    laneNumber                              AS lane_number,
+    trafficCount                            AS traffic_count,
+
+    trafficCount * 1.0 / (1800 * laneNumber) AS congestion_ratio,
+
+    CASE
+        WHEN trafficCount * 1.0 / (1800 * laneNumber) < 7
+            THEN 'Free flow'
+        WHEN trafficCount * 1.0 / (1800 * laneNumber) < 9
+            THEN 'Moderate'
+        WHEN trafficCount * 1.0 / (1800 * laneNumber) <= 10
+            THEN 'Heavy'
+        ELSE 'Over capacity'
+    END AS congestion_level
+FROM traffic_raw;
+
+UPDATE traffic
+SET region_name = CASE
+    WHEN region_name = '02 - Auckland' THEN 'Auckland'
+    WHEN region_name = '09 - Wellington' THEN 'Wellington'
+    WHEN region_name = '11 - Canterbury' THEN 'Canterbury'
+    ELSE region_name
+END;
+
+ALTER TABLE traffic
+DROP COLUMN site_id,
+DROP COLUMN class_weight;
+ALTER TABLE traffic
+RENAME COLUMN region_name TO region;
+ALTER TABLE traffic
+ADD COLUMN year INT;
+
+UPDATE traffic
+SET year = EXTRACT(YEAR FROM start_date);
+
+SELECT
+    start_date,
+    AVG(congestion_ratio) AS avg_congestion_ratio
+FROM traffic
+GROUP BY start_date
+ORDER BY start_date;
+
+SELECT
+    *,
+    AVG(congestion_ratio) OVER (PARTITION BY start_date) AS avg_congestion_ratio_per_day
+FROM traffic
+ORDER BY start_date;
+
+ALTER TABLE traffic
+RENAME TO traffic_final;
