@@ -1,9 +1,9 @@
 # Data Science Portfolio
 
 Welcome to my data science portfolio. 
-This repository showcases a collection of my projects in **Python, SQL, Data Analytics, and Automation**.
+This repository showcases a collection of my projects in **Python, SQL, Data Analytics, Data Visualisation and Automation**.
 
-Each project demonstrates a specific area of expertise — from anomaly detection and CI/CD pipelines to SQL analytics and data simulation.
+Each project demonstrates a specific area of expertise — from anomaly detection and CI/CD pipelines to SQL analytics and data visualisation.
 
 ---
 
@@ -29,12 +29,17 @@ Developed a dynamic simulation to represent flight mechanics.
 - Modeled trajectories using Python and NumPy.  
 - Visualized stability responses and time-series data.
 
+### 4. [Transport Wellbeing Analytics Platform](./transport-wellbeing-analytics-platform)
+Gathered and altered data and presented my findings on a dashboard.
+- Used public datasets to produce reports of transport and wellbeing data.
+- SQL and DAX commands to create an infromative Power BI dashboard.
+
 ---
 
 ## Skills Highlighted
-- Python (Pandas, NumPy, PyTest)
+- Python (Pandas, NumPy, PyTest, Matplotlib, Sci-kit Learn)
 - SQL (data querying & optimization)
-- Tableau
+- Tableau, Power BI and Excel
 - GitHub Actions (CI/CD)
 - Data wrangling, cleaning, and visualization
 - Simulation & applied analytics
@@ -50,4 +55,5 @@ Developed a dynamic simulation to represent flight mechanics.
 
 ## Contact
 If you’d like to connect, feel free to reach out:  
-email: anishhota@outlook.com
+Email: anishhota@outlook.com
+LinkedIn: www.linkedin.com/in/anish-hota-58bb3617b
